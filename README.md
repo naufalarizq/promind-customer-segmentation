@@ -1,8 +1,9 @@
 <a name="top"></a>
+
 <h1 align="center"><img src="logo/blended purple blue.png" alt="PROMIND Logo" width="300"></h1>
 
-[Sekilas Tentang](#sekilas-tentang) | [Instalasi](#instalasi) | [Konfigurasi](#konfigurasi) | [Cara Pemakaian](#cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi)
-:---:|:---:|:---:|:---:|:---:|:---:
+| [Sekilas Tentang](#sekilas-tentang) | [Instalasi](#instalasi) | [Konfigurasi](#konfigurasi) | [Cara Pemakaian](#cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi) |
+| :---------------------------------: | :---------------------: | :-------------------------: | :-------------------------------: | :-----------------------: | :---------------------: |
 
 [`^ Kembali ke atas ^`](#top)
 
@@ -15,6 +16,7 @@
 ## Latar Belakang Masalah
 
 Dalam era digital, perusahaan ritel menghadapi tantangan signifikan:
+
 - **Pemborosan anggaran promosi**: Strategi pemasaran yang belum mempertimbangkan perilaku pelanggan spesifik
 - **Loyalitas pelanggan yang menurun**: Kurangnya personalisasi dalam komunikasi dan penawaran
 - **Inefisiensi segmentasi**: Pengelompokan pelanggan hanya berdasarkan demografi tanpa mempertimbangkan perilaku transaksi
@@ -25,16 +27,19 @@ Dalam era digital, perusahaan ritel menghadapi tantangan signifikan:
 PROMIND menawarkan pendekatan terintegrasi yang menggabungkan:
 
 1. **RFM Analysis** - Analisis mendalam berdasarkan:
+
    - **Recency**: Berapa lama sejak transaksi terakhir (dalam hari)
    - **Frequency**: Berapa banyak transaksi yang dilakukan
    - **Monetary**: Berapa nilai total transaksi pelanggan
 
 2. **Machine Learning Clustering** - Menggunakan K-Means untuk segmentasi otomatis dengan:
+
    - Penentuan jumlah cluster optimal via Elbow Method & Silhouette Score
    - Stabilitas model melalui random state sensitivity analysis
    - Visualisasi PCA untuk interpretasi cluster
 
 3. **Business Intelligence** - Insight bisnis actionable:
+
    - Profiling setiap segmen (Champions, Loyal Customers, Potential Loyalists, At Risk)
    - Value Efficiency Index untuk identifikasi high-value segments
    - Priority scoring untuk targeting pelanggan
@@ -51,27 +56,29 @@ PROMIND menawarkan pendekatan terintegrasi yang menggabungkan:
 ✅ **Business Profiling** - Complete segment analysis dan visualization  
 ✅ **Marketing Intelligence** - Rule-based recommendation engine  
 ✅ **Export & Visualization** - CSV reports, JSON blueprints, dan charts  
-✅ **Reproducible Analysis** - Full source code dan dokumentasi lengkap  
+✅ **Reproducible Analysis** - Full source code dan dokumentasi lengkap
 
 ## Tech Stack
 
-| Komponen | Tools/Library |
-|----------|---------------|
-| **Language** | Python 3.8+ |
-| **Data Processing** | Pandas, NumPy |
-| **Visualization** | Matplotlib, Seaborn, Plotly |
-| **Machine Learning** | Scikit-learn (K-Means) |
-| **Interactive Environment** | Jupyter Notebook |
-| **Version Control** | Git/GitHub |
+| Komponen                    | Tools/Library               |
+| --------------------------- | --------------------------- |
+| **Language**                | Python 3.8+                 |
+| **Data Processing**         | Pandas, NumPy               |
+| **Visualization**           | Matplotlib, Seaborn, Plotly |
+| **Machine Learning**        | Scikit-learn (K-Means)      |
+| **Interactive Environment** | Jupyter Notebook            |
+| **Version Control**         | Git/GitHub                  |
 
 ---
 
 # Instalasi
+
 [`^ Kembali ke atas ^`](#top)
 
 ## Kebutuhan Sistem
 
 ### Minimum Requirements:
+
 - **OS**: Windows 10+, macOS 10.14+, atau Linux (Ubuntu 18.04+)
 - **Python**: 3.8 atau lebih baru
 - **RAM**: 2GB minimum (4GB+ direkomendasikan)
@@ -79,6 +86,7 @@ PROMIND menawarkan pendekatan terintegrasi yang menggabungkan:
 - **Internet**: Koneksi stabil untuk download dataset
 
 ### Prerequisites:
+
 - Python dan pip terinstall
 - Git (opsional, untuk clone repository)
 - Jupyter Notebook atau VS Code dengan Python extension
@@ -89,6 +97,7 @@ PROMIND menawarkan pendekatan terintegrasi yang menggabungkan:
 ### 1. Persiapan Environment
 
 #### Windows:
+
 ```bash
 # Buka Command Prompt atau PowerShell
 # Navigate ke folder yang diinginkan
@@ -102,6 +111,7 @@ promind_env\Scripts\activate
 ```
 
 #### macOS / Linux:
+
 ```bash
 # Buka Terminal
 # Navigate ke folder yang diinginkan
@@ -117,6 +127,7 @@ source promind_env/bin/activate
 ### 2. Clone Repository (Opsional)
 
 Jika menggunakan GitHub:
+
 ```bash
 git clone https://github.com/your-username/promind-customer-segmentation.git
 cd promind-customer-segmentation
@@ -127,6 +138,7 @@ Atau download ZIP langsung dari GitHub dan ekstrak.
 ### 3. Install Dependencies
 
 Buat file `requirements.txt` dengan konten:
+
 ```
 pandas==2.0.3
 numpy==1.24.3
@@ -141,11 +153,13 @@ openpyxl==3.1.2
 ```
 
 Install semua dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 Atau install secara individual:
+
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter notebook plotly
 ```
@@ -155,11 +169,13 @@ pip install pandas numpy matplotlib seaborn scikit-learn jupyter notebook plotly
 Dataset Online Retail II dari Kaggle:
 
 **Opsi A: Download Manual**
+
 1. Kunjungi: https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci
 2. Klik tombol "Download" (membutuhkan akun Kaggle gratis)
 3. Ekstrak file ke folder `dataset/`
 
 **Opsi B: Menggunakan Kaggle CLI**
+
 ```bash
 # Install kaggle CLI
 pip install kaggle
@@ -174,6 +190,7 @@ unzip online-retail-ii-uci.zip -d dataset/
 ```
 
 **Struktur folder yang diharapkan:**
+
 ```
 promind-customer-segmentation/
 ├── dataset/
@@ -198,6 +215,7 @@ jupyter notebook
 ```
 
 Atau untuk VS Code:
+
 ```bash
 # Buka folder di VS Code
 code .
@@ -210,6 +228,7 @@ code .
 ### 6. Verifikasi Instalasi
 
 Jalankan cell pertama dari notebook untuk memverifikasi:
+
 ```python
 # IMPORT LIBRARY
 import pandas as pd
@@ -230,6 +249,7 @@ Jika tidak ada error, instalasi selesai.
 ---
 
 # Konfigurasi
+
 [`^ Kembali ke atas ^`](#top)
 
 ## Konfigurasi Dataset
@@ -237,12 +257,14 @@ Jika tidak ada error, instalasi selesai.
 ### 1. Path Configuration
 
 Pastikan path dataset benar di notebook cell #3:
+
 ```python
 # DATA LOADING
 df = pd.read_csv("dataset/online_retail_II.csv")
 ```
 
 Jika menggunakan path absolut:
+
 ```python
 import os
 dataset_path = os.path.join(os.getcwd(), "dataset", "online_retail_II.csv")
@@ -252,11 +274,13 @@ df = pd.read_csv(dataset_path)
 ### 2. Filtering Configuration
 
 Notebook sudah dikonfigurasi untuk:
+
 - **Filter geografis**: United Kingdom (baris ke-4 "DATA CLEANING FOR RFM ANALYSIS")
 - **Validasi transaksi**: Quantity > 0 dan UnitPrice > 0
 - **Handling missing values**: Buang baris tanpa CustomerID
 
 Untuk mengubah filter (misal ke country lain):
+
 ```python
 # Ubah line ini:
 df_clean = df[df["Country"] == "Netherlands"].copy()  # Ganti "United Kingdom"
@@ -265,12 +289,14 @@ df_clean = df[df["Country"] == "Netherlands"].copy()  # Ganti "United Kingdom"
 ### 3. RFM Parameters Configuration
 
 **Snapshot Date** (otomatis menggunakan tanggal terakhir + 1 hari):
+
 ```python
 # Line di "RFM FEATURE ENGINEERING" cell
 snapshot_date = df_clean["InvoiceDate"].max() + pd.Timedelta(days=1)
 ```
 
 Untuk menggunakan tanggal spesifik:
+
 ```python
 snapshot_date = pd.Timestamp("2024-12-14")
 ```
@@ -278,6 +304,7 @@ snapshot_date = pd.Timestamp("2024-12-14")
 ### 4. Clustering Configuration
 
 **Jumlah Cluster (K)** - Ubah nilai OPTIMAL_K:
+
 ```python
 # Default: K = 4 (sudah optimal)
 OPTIMAL_K = 4
@@ -288,6 +315,7 @@ for k in range(2, 11):  # Test K dari 2 sampai 10
 ```
 
 **Random State** - untuk reproducibility:
+
 ```python
 # Semua KMeans sudah menggunakan random_state=42
 kmeans = KMeans(
@@ -300,6 +328,7 @@ kmeans = KMeans(
 ### 5. Output Configuration
 
 **Path penyimpanan file output** (default: folder `output/`):
+
 ```python
 # File CSV:
 final_csv_path = f"output/PROMIND_RFM_Segmentation_{timestamp}.csv"
@@ -311,6 +340,7 @@ final_csv_path = f"results/PROMIND_RFM_Segmentation_{timestamp}.csv"
 ```
 
 **Resolusi gambar** (charts default: 300 dpi):
+
 ```python
 # Current setting:
 plt.savefig("output/01_rfm_distribution.png", dpi=300, bbox_inches='tight')
@@ -346,6 +376,7 @@ PROMIND_PLAYBOOK = {
 ### 7. Priority Score Configuration
 
 Bobot scoring untuk prioritas customer (default):
+
 ```python
 # Weight untuk scoring:
 W_MON = 0.5    # Monetary (50%)
@@ -361,6 +392,7 @@ W_REC = 0.2
 ---
 
 # Cara Pemakaian
+
 [`^ Kembali ke ata ^`](#top)
 
 ## Workflow Tahap Demi Tahap
@@ -368,10 +400,12 @@ W_REC = 0.2
 ### Fase 1: Data Preparation (Cell 1-5)
 
 **Step 1: Import Library**
+
 - Jalankan cell "IMPORT LIBRARY"
 - Hasil: Semua library terimport, warning diabaikan
 
 **Step 2: Load Dataset**
+
 - Jalankan cell "DATA LOADING, COLUMN STANDARDIZATION & INITIAL AUDIT"
 - Output:
   - Dataset shape: berapa baris dan kolom
@@ -380,6 +414,7 @@ W_REC = 0.2
   - Summary missing values dan anomali
 
 **Step 3: Data Cleaning**
+
 - Jalankan cell "DATA CLEANING FOR RFM ANALYSIS"
 - Filter dilakukan:
   - Country == "United Kingdom"
@@ -388,12 +423,14 @@ W_REC = 0.2
 - Output: Dataset setelah cleaning dengan sanity check
 
 **Step 4: RFM Feature Engineering**
+
 - Jalankan cell "RFM FEATURE ENGINEERING"
 - Output:
   - RFM dataframe dengan 3 kolom: Recency, Frequency, Monetary
   - Summary statistics: min, max, mean, median, std
 
 **Step 5: Classic RFM Baseline**
+
 - Jalankan cell "RFM SCORE CLASSIC"
 - Output:
   - RFM scores (quantile-based 1-5)
@@ -403,13 +440,17 @@ W_REC = 0.2
 ### Fase 2: Feature Transformation & EDA (Cell 6-8)
 
 **Step 6: RFM Distribution Analysis**
+
 - Jalankan cell "RFM DISTRIBUTION & SKEWNESS ANALYSIS"
 - Chart:
   - 3 histogram: Recency, Frequency, Monetary
   - Skewness values (menunjukkan distribusi data)
 - Interpretasi: Data RFM biasanya right-skewed, perlu log transformation
 
+![RFM Distribution Analysis](output/01_rfm_distribution.png)
+
 **Step 7: Log Transformation & Scaling**
+
 - Jalankan cell "LOG TRANSFORMATION & FEATURE SCALING"
 - Proses:
   - Log1p transformation untuk mengurangi skew
@@ -419,6 +460,7 @@ W_REC = 0.2
   - Verification: mean ≈ 0, std ≈ 1
 
 **Step 8: Elbow Method & Silhouette Analysis**
+
 - Jalankan cell "ELBOW METHOD & SILHOUETTE SCORE"
 - Chart:
   - Elbow plot: inertia vs K
@@ -428,9 +470,12 @@ W_REC = 0.2
   - Silhouette score tertinggi menunjukkan K optimal
   - Hasil: K=4 adalah optimal
 
+![Elbow Method & Silhouette Analysis](output/02_elbow_silhouette_analysis.png)
+
 ### Fase 3: Clustering & Validation (Cell 9-13)
 
 **Step 9: K-Means Stability Check**
+
 - Jalankan cell "K-MEANS STABILITY CHECK"
 - Validasi:
   - Run KMeans 10 kali dengan different random states
@@ -440,7 +485,10 @@ W_REC = 0.2
   - Stability dataframe
   - Chart: silhouette stability across random states
 
+![K-Means Stability Check](output/03_kmeans_stability.png)
+
 **Step 10: K-Means Final Clustering**
+
 - Jalankan cell "K-MEANS ROBUSTNESS & METHOD JUSTIFICATION"
 - Output:
   - Final KMeans model dengan K=4
@@ -449,6 +497,7 @@ W_REC = 0.2
   - Method justification (mengapa K-Means dipilih)
 
 **Step 11: Create RFM Result**
+
 - Jalankan cell "CREATE RFM_RESULT WITH CLUSTER LABELS"
 - Output:
   - rfm_result dataframe dengan kolom Cluster
@@ -456,6 +505,7 @@ W_REC = 0.2
   - Complete cluster profile (min/mean/max/median/std)
 
 **Step 12: 3D Visualization**
+
 - Jalankan cell "3D VISUALISASI RFM"
 - Visualisasi:
   - Plotly 3D scatter: Recency vs Frequency vs Monetary
@@ -463,17 +513,24 @@ W_REC = 0.2
   - Interactive hover: CustomerID
 - Output: chart_04_3d_rfm_scatter.png
 
+![3D RFM Scatter Plot](output/04_3d_rfm_scatter.png)
+
 **Step 13: PCA Projection**
+
 - Jalankan cell "K-MEANS CLUSTER VISUALIZATION (PCA PROJECTION)"
 - Visualisasi:
   - PCA 2D projection dari 3 dimensi RFM
   - Explained variance ratio per PC
-  - Scatter plot colored by cluster
+
+![PCA Cluster Visualization](output/10_pca_cluster_visualization.png)
+
+- Scatter plot colored by cluster
 - Output: chart_10_pca_cluster_visualization.png
 
 ### Fase 4: Business Interpretation (Cell 14-16)
 
 **Step 14: Segment Naming & Profiling**
+
 - Jalankan cell "CLUSTER INTERPRETATION & BUSINESS SEGMENT NAMING"
 - Proses:
   - Ranking cluster berdasarkan Recency, Frequency, Monetary
@@ -484,15 +541,30 @@ W_REC = 0.2
   - RFM summary per segment
 
 **Step 15: Segment Visualization**
+
 - Jalankan cell "RFM & SEGMENT VISUALIZATION"
 - Charts:
   - Countplot: Customer distribution per segment
   - Boxplot: Monetary distribution per segment (log scale)
-  - Scatterplot: Recency vs Frequency (colored by segment)
-  - Scatterplot: Frequency vs Monetary (colored by segment)
-- Output: 4 files (05-08_*.png)
+  - Scatterplot: Recency vs Fre
+
+**Segment Distribution**
+![Segment Distribution](output/05_segment_distribution.png)
+
+**Monetary by Segment**
+![Monetary by Segment](output/06_monetary_by_segment.png)
+
+**Recency vs Frequency**
+![Recency vs Frequency](output/07_recency_vs_frequency.png)
+
+**Frequency vs Monetary**
+![Frequency vs Monetary](output/08_frequency_vs_monetary.png)quency (colored by segment)
+
+- Scatterplot: Frequency vs Monetary (colored by segment)
+- Output: 4 files (05-08\_\*.png)
 
 **Step 16: Business Metrics & Insights**
+
 - Jalankan cell dengan business summary
 - Output:
   - Total customers & total revenue
@@ -504,32 +576,45 @@ W_REC = 0.2
 ### Fase 5: Marketing Strategy & Export (Cell 17-20)
 
 **Step 17: Marketing Recommendation Engine**
+
 - Jalankan cell "MARKETING RECOMMENDATION ENGINE"
 - Output:
   - Persona & objective per segment
   - Primary offers dan tactics
   - Channel strategy dan campaign cadence
-  - Customer priority scoring (0-1)
-  - Priority tier distribution (Low/Medium/High/Critical)
+
+![PROMIND Segment Share](output/11_segment_share_pie.png)
+
+- Customer priority scoring (0-1)
+- Priority tier distribution (Low/Medium/High/Critical)
 
 **Step 18: PROMIND Finalization**
+
 - Jalankan cell "PROMIND FINALIZATION"
 - Output:
   - Executive summary (text)
   - Pie chart: Segment share percentage
-  - CSV export: PROMIND_RFM_Segmentation_{timestamp}.csv
-  - CSV export: PROMIND_PriorityCustomers_Top50_{timestamp}.csv
-  - CSV export: PROMIND_MarketingRecommendations_{timestamp}.csv
-  - JSON export: PROMIND_DeploymentBlueprint_{timestamp}.json
+  - CSV export: PROMIND*RFM_Segmentation*{timestamp}.csv
+  - CSV export: PROMIND*PriorityCustomers_Top50*{timestamp}.csv
+  - CSV export: PROMIND*MarketingRecommendations*{timestamp}.csv
+  - JSON export: PROMIND*DeploymentBlueprint*{timestamp}.json
 
 **Step 19: Outlier Analysis**
+
 - Jalankan cell "ANALISIS DAMPAK OUTLIER"
 - Output:
   - Top 1% monetary threshold
   - Distribution analysis
   - Mean vs Median comparison (outlier effect)
-  - Pie chart: Top 1% distribution per cluster
-  - Interpretation: whale effect pada data retail
+
+**Monetary Distribution (Outlier Analysis)**
+![Monetary Distribution Outlier](output/12_monetary_distribution_outlier.png)
+
+**Top 1% Customer Distribution**
+![Top 1% Distribution](output/13_top1pct_distribution.png)
+
+- Pie chart: Top 1% distribution per cluster
+- Interpretation: whale effect pada data retail
 
 ## Interpreting Results
 
@@ -537,16 +622,17 @@ W_REC = 0.2
 
 Contoh hasil clustering (4 cluster):
 
-| Segment | Recency | Frequency | Monetary | Profile |
-|---------|---------|-----------|----------|---------|
-| Champions | 10 hari | 50 transaksi | £5000 | High value, very active |
-| Loyal Customers | 20 hari | 30 transaksi | £2000 | Stable, consistent |
-| Potential Loyalists | 8 hari | 5 transaksi | £500 | Recent buyers, growth potential |
-| At Risk | 100 hari | 2 transaksi | £200 | Inactive, churn risk |
+| Segment             | Recency  | Frequency    | Monetary | Profile                         |
+| ------------------- | -------- | ------------ | -------- | ------------------------------- |
+| Champions           | 10 hari  | 50 transaksi | £5000    | High value, very active         |
+| Loyal Customers     | 20 hari  | 30 transaksi | £2000    | Stable, consistent              |
+| Potential Loyalists | 8 hari   | 5 transaksi  | £500     | Recent buyers, growth potential |
+| At Risk             | 100 hari | 2 transaksi  | £200     | Inactive, churn risk            |
 
 ### 2. Priority Score Interpretation
 
 Priority score (0-1) digunakan untuk ranking customer:
+
 - **0.8-1.0**: Critical - immediate action needed
 - **0.6-0.8**: High - prioritize for campaigns
 - **0.4-0.6**: Medium - standard marketing
@@ -555,24 +641,28 @@ Priority score (0-1) digunakan untuk ranking customer:
 ### 3. Marketing Actions per Segment
 
 **Champions (0.5 weight Monetary, 0.3 Frequency, 0.2 Recency)**:
+
 - Goal: Retain & maximize CLV
 - Offer: VIP perks, early access, premium bundle
 - Channel: Email, App Push, WhatsApp
 - Cadence: Weekly personalized
 
 **Loyal Customers**:
+
 - Goal: Increase basket size & frequency
 - Offer: Points booster, cross-sell, free shipping
 - Channel: Email, App Push
 - Cadence: Bi-weekly
 
 **Potential Loyalists**:
+
 - Goal: Convert to loyal customer
 - Offer: Second-purchase incentive
 - Channel: Email, App Push, WhatsApp
 - Cadence: 2-3 touches in 14 days
 
 **At Risk**:
+
 - Goal: Reactivate & prevent churn
 - Offer: Win-back discount, strong incentive
 - Channel: Email, WhatsApp, SMS
@@ -581,6 +671,7 @@ Priority score (0-1) digunakan untuk ranking customer:
 ---
 
 # Pembahasan
+
 [`^ Kembali ke atas ^`](#top)
 
 ## Metodologi RFM
@@ -590,11 +681,13 @@ Priority score (0-1) digunakan untuk ranking customer:
 RFM adalah framework yang mengukur customer value berdasarkan 3 dimensi perilaku:
 
 1. **Recency (R)**: Berapa lama sejak pembelian terakhir?
+
    - Pelanggan dengan Recency rendah (baru beli) = engagement tinggi
    - Pelanggan dengan Recency tinggi (lama tidak beli) = churn risk
    - Formula: `(Snapshot Date - Last Purchase Date).days`
 
 2. **Frequency (F)**: Berapa sering pelanggan membeli?
+
    - Frequency tinggi = loyal customer
    - Frequency rendah = rare buyer atau new customer
    - Formula: `COUNT(DISTINCT InvoiceNo)`
@@ -630,11 +723,13 @@ Raw Data
 ### Skewness & Log Transformation
 
 RFM data umumnya right-skewed (banyak small spenders, few big spenders):
+
 - Log transformation mengurangi skew
 - Mencegah dominasi outliers dalam clustering
 - Meningkatkan cluster separation
 
 Contoh:
+
 ```
 Original Recency: [1, 5, 10, 50, 365] (highly skewed)
 Log Recency: [0, 1.6, 2.3, 3.9, 5.9] (more balanced)
@@ -645,12 +740,14 @@ Log Recency: [0, 1.6, 2.3, 3.9, 5.9] (more balanced)
 ### Algoritma K-Means
 
 K-Means adalah unsupervised learning algorithm yang:
+
 1. Initialize K random centroids
 2. Assign points ke nearest centroid
 3. Update centroids berdasarkan mean points
 4. Repeat hingga converge
 
 **Why K-Means untuk RFM?**
+
 - Interpretasi cluster yang jelas (centroid = prototype segment)
 - Scalable untuk dataset besar
 - Cocok untuk continuous features (R, F, M adalah numeric)
@@ -659,11 +756,13 @@ K-Means adalah unsupervised learning algorithm yang:
 ### Menentukan K Optimal
 
 **Elbow Method**:
+
 - Plot inertia (within-cluster sum of squares) vs K
 - Cari "elbow" point (diminishing returns)
 - Untuk PROMIND: elbow terlihat di K=3-4
 
 **Silhouette Score** (digunakan di PROMIND):
+
 - Mengukur seberapa baik point dieklustered
 - Range: -1 to 1
   - 1 = cluster sempurna
@@ -672,6 +771,7 @@ K-Means adalah unsupervised learning algorithm yang:
 - Untuk PROMIND: K=4 menghasilkan silhouette ≈ 0.35-0.40
 
 **Decision untuk K=4**:
+
 ```python
 # Dari PROMIND hasil analysis:
 K    Silhouette    Inertia
@@ -685,11 +785,13 @@ K    Silhouette    Inertia
 ### Stability & Robustness
 
 PROMIND melakukan **random state sensitivity analysis**:
+
 - Jalankan KMeans 10 kali dengan berbeda random seed
 - Hitung silhouette score per run
 - Coefficient of Variation (CV) < 10% = STABLE model
 
 Hasil:
+
 ```
 Silhouette Mean: 0.385
 Silhouette Std:  0.002
@@ -714,6 +816,7 @@ Overall_rank = R_rank + F_rank + M_rank  # Semakin rendah semakin bagus
 ```
 
 **Mapping cluster ke segment name**:
+
 ```
 Rank 1 (lowest) → Champions        (high R, F, M)
 Rank 2         → Loyal Customers  (stable R, F, M)
@@ -726,11 +829,13 @@ Rank 4 (highest) → At Risk        (high R = lama tidak beli)
 Formula: `Revenue_Contribution% / Customer_Share%`
 
 **Interpretasi**:
+
 - Index > 2 = Revenue Engine (high-value, efficient segment)
 - Index 1-2 = Growth Driver (balanced value)
 - Index < 1 = Cost-sensitive (low-value, perlu nurture)
 
 Contoh:
+
 ```
 Segment                Share%   Revenue%   Index    Role
 Champions              10%      40%        4.0 → Revenue Engine ★★★
@@ -740,6 +845,7 @@ At Risk                25%      3%         0.12 → Churn prevention
 ```
 
 **Strategic Implication**:
+
 - Fokus retention pada Champions (highest ROI)
 - Growth strategy pada Loyal Customers
 - Reactive campaigns untuk At Risk
@@ -750,6 +856,7 @@ At Risk                25%      3%         0.12 → Churn prevention
 ### Phenomenon
 
 Retail data menunjukkan **Pareto distribution** (80/20 rule):
+
 - 20% customers menyumbang 80% revenue
 - 1% customers (whales) menyumbang hingga 30% revenue
 - Rest of customers: high volume, low value
@@ -779,16 +886,19 @@ Revenue Concentration: Top 1% = 25-35% total revenue
 ### Mengapa bukan DBSCAN?
 
 **DBSCAN Kelebihan:**
+
 - Tidak perlu specify K di awal
 - Deteksi outliers otomatis
 - Flexible cluster shapes
 
 **DBSCAN Kekurangan:**
+
 - Susah tune parameter (eps, min_samples)
 - Banyak noise points di RFM data (tidak scalable)
 - Cluster size sangat bervariasi (sulit interpret)
 
 **PROMIND Decision**: K-Means lebih cocok untuk RFM karena:
+
 - K=4 sudah optimal dan stable
 - Business interpretation jelas (centroid = ideal customer profile)
 - Semua customer ter-assign ke segmen (actionable untuk marketing)
@@ -796,10 +906,12 @@ Revenue Concentration: Top 1% = 25-35% total revenue
 ### Mengapa bukan Hierarchical Clustering?
 
 **Hierarchical Clustering Kelebihan:**
+
 - Dendrogram visualization
 - Flexible cutting threshold
 
 **Hierarchical Clustering Kekurangan:**
+
 - Computational expensive untuk 5000+ customers
 - Tidak stable (berbeda linkage method → berbeda tree)
 - Timing tidak feasible untuk real-time update
@@ -811,6 +923,7 @@ Revenue Concentration: Top 1% = 25-35% total revenue
 ### 1. Feature Scaling Importance
 
 Tanpa scaling:
+
 - Monetary range: [10, 50000]
 - Frequency range: [1, 100]
 - Recency range: [1, 365]
@@ -840,12 +953,13 @@ KMeans(n_clusters=4) → DIFFERENT setiap run
 
 ### 4. Silhouette vs Inertia Trade-off
 
-| Metric | Mengukur | Use Case |
-|--------|----------|----------|
-| **Inertia** | Within-cluster tightness | Kompact cluster |
-| **Silhouette** | Separation antar cluster | Well-separated |
+| Metric         | Mengukur                 | Use Case        |
+| -------------- | ------------------------ | --------------- |
+| **Inertia**    | Within-cluster tightness | Kompact cluster |
+| **Silhouette** | Separation antar cluster | Well-separated  |
 
 PROMIND menggunakan **Silhouette** karena:
+
 - Better untuk overlapping data
 - Business-relevant (distinct segments)
 - Lebih robust terhadap outliers
@@ -853,6 +967,7 @@ PROMIND menggunakan **Silhouette** karena:
 ---
 
 # Referensi
+
 [`^ Kembali ke atas ^`](#top)
 
 ## Dataset & Sumber Data
@@ -867,55 +982,66 @@ PROMIND menggunakan **Silhouette** karena:
 ## Python Libraries Documentation
 
 ### Data Processing
+
 - [Pandas Documentation](https://pandas.pydata.org/docs/) - Data manipulation
 - [NumPy Documentation](https://numpy.org/doc/) - Numerical computing
 
 ### Visualization
+
 - [Matplotlib Documentation](https://matplotlib.org/stable/contents.html) - Static plots
 - [Seaborn Documentation](https://seaborn.pydata.org/) - Statistical graphics
 - [Plotly Documentation](https://plotly.com/python/) - Interactive visualization
 
 ### Machine Learning
+
 - [Scikit-learn Clustering Guide](https://scikit-learn.org/stable/modules/clustering.html) - K-Means, metrics
 - [Scikit-learn Preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html) - StandardScaler, scaling
 
 ### Notebooks & Development
+
 - [Jupyter Documentation](https://jupyter.org/) - Interactive computing
 - [IPython Documentation](https://ipython.readthedocs.io/) - Enhanced Python shell
 
 ## Jurnal & Research Papers
 
 1. **RFM Analysis Foundation**
-   - Pranata, A., & Saepudin, E. (2021). Customer segmentation using RFM model and K-Means clustering: A case study on online retail dataset. *International Journal of Computer Applications*, 183(43), 18–23.
-   - Sarı, T., & Cengiz, H. (2023). Customer segmentation using Recency, Frequency, and Monetary analysis with machine learning techniques. *Procedia Computer Science*, 219, 108–117.
+
+   - Pranata, A., & Saepudin, E. (2021). Customer segmentation using RFM model and K-Means clustering: A case study on online retail dataset. _International Journal of Computer Applications_, 183(43), 18–23.
+   - Sarı, T., & Cengiz, H. (2023). Customer segmentation using Recency, Frequency, and Monetary analysis with machine learning techniques. _Procedia Computer Science_, 219, 108–117.
 
 2. **K-Means Clustering**
-   - Jain, A. K. (2010). Data clustering: 50 years beyond K-means. *Pattern Recognition Letters*, 31(8), 651–666.
-   - Xu, R., & Wunsch, D. (2005). Survey of clustering algorithms. *IEEE Transactions on Neural Networks*, 16(3), 645–678.
+
+   - Jain, A. K. (2010). Data clustering: 50 years beyond K-means. _Pattern Recognition Letters_, 31(8), 651–666.
+   - Xu, R., & Wunsch, D. (2005). Survey of clustering algorithms. _IEEE Transactions on Neural Networks_, 16(3), 645–678.
 
 3. **Customer Segmentation & CRM**
-   - Hosseini, S. B., Maleki, A., & Gholamian, M. R. (2010). Cluster analysis using data mining approach to develop CRM methodology to assess the customer loyalty. *Expert Systems with Applications*, 37(7), 5259–5264.
-   - Sohn, S. Y., & Kim, H. S. (2008). Searching customer patterns of mobile service using clustering and quantitative association rule. *Expert Systems with Applications*, 34(2), 1070–1077.
+
+   - Hosseini, S. B., Maleki, A., & Gholamian, M. R. (2010). Cluster analysis using data mining approach to develop CRM methodology to assess the customer loyalty. _Expert Systems with Applications_, 37(7), 5259–5264.
+   - Sohn, S. Y., & Kim, H. S. (2008). Searching customer patterns of mobile service using clustering and quantitative association rule. _Expert Systems with Applications_, 34(2), 1070–1077.
 
 4. **Machine Learning & Clustering Evaluation**
+
    - Han, J., Kamber, M., & Pei, J. (2012). Data mining: Concepts and techniques (3rd ed.). Morgan Kaufmann.
-   - Kohonen, T. (2013). Essentials of the self-organizing map. *Neural Networks*, 37, 52–65.
+   - Kohonen, T. (2013). Essentials of the self-organizing map. _Neural Networks_, 37, 52–65.
 
 5. **Data Privacy & Personalization**
-   - Nguyen, B., Simkin, L., & Canhoto, A. (2020). The dark side of digital personalization: An agenda for research and practice. *Journal of Business Research*, 116, 209–221.
+   - Nguyen, B., Simkin, L., & Canhoto, A. (2020). The dark side of digital personalization: An agenda for research and practice. _Journal of Business Research_, 116, 209–221.
 
 ## Tools & Resources
 
 ### Online Tools
+
 - [Kaggle Notebooks](https://www.kaggle.com/code) - Cloud-based Jupyter environment
 - [Google Colab](https://colab.research.google.com) - Free GPU-enabled notebooks
 - [Microsoft Azure ML Studio](https://ml.azure.com) - Enterprise ML platform
 
 ### Version Control
+
 - [Git Documentation](https://git-scm.com/doc) - Version control basics
 - [GitHub Guides](https://guides.github.com/) - GitHub workflow
 
 ### Additional Resources
+
 - [Towards Data Science Blog](https://towardsdatascience.com/) - Data science articles
 - [Medium Data Science Tags](https://medium.com/tag/data-science) - Community articles
 - [Stack Overflow Data Science](https://stackoverflow.com/questions/tagged/data-science) - Q&A community
@@ -923,6 +1049,7 @@ PROMIND menggunakan **Silhouette** karena:
 ## Project References
 
 ### Similar Projects
+
 - [Customer Segmentation Kaggle](https://www.kaggle.com/code) - Community implementations
 - [RFM Analysis GitHub](https://github.com/search?q=rfm+segmentation) - Open-source projects
 
@@ -931,6 +1058,7 @@ PROMIND menggunakan **Silhouette** karena:
 **Proyek Capstone PROMIND (A25-CS324)**
 
 Anggota Tim:
+
 1. M001D5Y1463 - Naufal Akmal Rizqulloh - Machine Learning
 2. M001D5Y0111 - Ahmad Zaidan Al-Anshory - Machine Learning
 3. M298D5Y1979 - Yoga Fatiqurrahman - Machine Learning
@@ -947,22 +1075,27 @@ Anggota Tim:
 ### Common Issues & Solutions
 
 **Q: Dataset tidak ditemukan "FileNotFoundError: online_retail_II.csv"**
+
 - A: Pastikan folder `dataset/` ada dan file CSV sudah didownload
 - Cek path: `print(os.path.exists("dataset/online_retail_II.csv"))`
 
 **Q: Memory error saat run notebook**
+
 - A: Dataset terlalu besar untuk RAM
 - Solusi: Gunakan subset data atau upgrade RAM
 
 **Q: Library tidak terinstall "ModuleNotFoundError"**
+
 - A: Install requirements lagi
 - Command: `pip install -r requirements.txt`
 
 **Q: Cluster result berbeda setiap run**
+
 - A: Kemungkinan mengubah random_state
 - Pastikan `random_state=42` di semua KMeans
 
 **Q: Output CSV tidak tersimpan di folder output/**
+
 - A: Buat folder output: `mkdir output`
 - Atau ubah path di code
 
