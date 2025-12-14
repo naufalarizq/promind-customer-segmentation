@@ -1,0 +1,27 @@
+{
+  "SystemName": "PROMIND Dashboard",
+  "Purpose": "Segmentasi customer + prediksi respon promo untuk strategi pemasaran personal",
+  "CoreModules": [
+    "Data Ingestion (CSV / database)",
+    "RFM Pipeline (cleaning + RFM compute)",
+    "Clustering (KMeans) + Segment Naming",
+    "Predictive ML (RandomForest baseline)",
+    "Insights & Recommendation Panel",
+    "Export Target List (CSV) for marketing execution"
+  ],
+  "SuggestedDeploymentOptions": [
+    "Streamlit (fast MVP) + GitHub repo",
+    "Power BI dashboard using exported CSV",
+    "API microservice (FastAPI) for prediction endpoint (optional)"
+  ],
+  "Monitoring": [
+    "Track segment drift per minggu/bulan",
+    "Track campaign response rate per segment",
+    "Update model jika distribusi RFM berubah signifikan"
+  ],
+  "Artifacts": [
+    "output/PROMIND_RFM_Segmentation_20251214_201212.csv",
+    "output/PROMIND_PriorityCustomers_Top50_20251214_201212.csv",
+    "output/PROMIND_MarketingRecommendations_20251214_201212.csv"
+  ]
+}
